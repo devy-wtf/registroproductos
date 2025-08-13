@@ -1,3 +1,28 @@
 {
-    "productos":[]
+  "productos": [
+    {
+      "nombre": "kendall",
+      "precio": 12345789,
+      "stock": 1,
+      "id": "099a"
+    },
+    {
+      "id": "8a63",
+      "nombre": "ludmila",
+      "precio": 12345789,
+      "stock": 1
+    },
+    {
+      "id": "6206",
+      "nombre": "Fanta Naranja",
+      "precio": 300,
+      "stock": 50
+    },
+    {
+      "id": "085c",
+      "nombre": "coca cola",
+      "precio": 1200,
+      "stock": 45
+    }
+  ]
 }

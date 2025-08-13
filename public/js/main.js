@@ -24,3 +24,15 @@ form.addEventListener('submit', async (e) => {
   form.reset();
   cargarProductos();
 });
+
+window.eliminarProducto = async (id) => {
+  await eliminarProducto(id);
+  cargarProductos();
+};
+
+window.cargarFormulario = (producto) => {
+  document.getElementById('productoID').value = producto.id;
+  document.getElementById('nombreProducto').value = producto.nombre;
+  document.getElementById('precioProducto').value = producto.precio;
+  document.getElementById('stock').value = producto.stock;
+};

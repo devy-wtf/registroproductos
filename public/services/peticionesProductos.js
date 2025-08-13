@@ -1,11 +1,11 @@
-const API_URL = "http://localhost:3000/productos";
+const API_URL = "http://localhost:3001/productos";
 
 export async function cargarProductos() {
 
-    const res = fetch(API_URL)
-    const productos = await res.json
+    const res = await fetch(API_URL)
+    const productos = await res.json()
 
-    const lista = document.getElementsById('listaProductos')
+    const lista = document.getElementById('listaProductos')
     lista.innerHTML = ''
 
    productos.forEach(producto => {
@@ -27,11 +27,13 @@ export async function cargarProductos() {
 }
 
 export async function crearProducto(producto) {
-  await fetch(API_URL, {
+  const res = await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(producto)
   });
+  const data = await res.json()
+  console.log(data)
 }
 
 export async function actualizarProducto(id, producto) {
